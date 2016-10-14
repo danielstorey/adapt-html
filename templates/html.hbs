@@ -1,0 +1,23 @@
+<div class="html-inner component-inner" role="region" aria-label="{{_globals._components._text.ariaRegion}}">
+    {{> component this}}
+
+    {{#unless _template}}
+    <div class="html-items">
+        {{#each _items}}
+        <div class="html-item nth-child-{{@index}}">
+            <div class="html-item-inner">
+                {{#if this.length}}
+                    {{{a11y_text this}}}
+                {{else}}
+                <div class="html-item-object">
+                    {{#each this}}
+                    <div class="html-item-{{@key}}">{{{a11y_text this}}}</div>
+                    {{/each}}
+                </div>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/unless}}
+</div>

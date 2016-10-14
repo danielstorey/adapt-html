@@ -1,0 +1,88 @@
+.html-transition(@time) {
+	-webkit-transition: @time;
+	-moz-transition: @time;
+	-ms-transition: @time;
+	-o-transition: @time;
+	transition: @time;
+}
+
+.html-transform-rotate(@angle) {
+	-webkit-transform: rotate(unit(@angle, deg));
+	-moz-transform: rotate(unit(@angle, deg));
+	-ms-transform: rotate(unit(@angle, deg));
+	-o-transform: rotate(unit(@angle, deg));
+	transform: rotate(unit(@angle, deg));
+}
+
+.trickle-item, .html-button {
+	.html-transition(0.5s);
+	overflow: hidden;
+}
+
+.html-button {
+	text-align: center;
+}
+
+.trickle-item.trickle-item-hidden {
+	height: 0;
+}
+
+@-webkit-keyframes clickme {
+	0%   {.html-transform-rotate(0);}
+	25%  {.html-transform-rotate(-2);}
+	50%  {.html-transform-rotate(0);}
+	75%   {.html-transform-rotate(2);}
+	100% {.html-transform-rotate(0);}
+}
+
+@keyframes clickme {
+	0%   {.html-transform-rotate(0);}
+	25%  {.html-transform-rotate(-2);}
+	50%  {.html-transform-rotate(0);}
+	75%   {.html-transform-rotate(2);}
+	100% {.html-transform-rotate(0);}
+}
+
+.clickme {
+	-webkit-transition: top 0.25s, left 0.25s, -webkit-transform 0.2s;
+	-moz-transition: top 0.25s, left 0.25s, -moz-transform 0.2s;
+	-ms-transition: top 0.25s, left 0.25s, -ms-transform 0.2s;
+	-o-transition: top 0.25s, left 0.25s, -o-transform 0.2s;
+	transition: top 0.25s, left 0.25s, transform 0.2s;
+	-webkit-animation: clickme 0.3s infinite linear;
+	animation: clickme 0.3s infinite linear;
+	cursor: pointer;
+
+	&.complete {
+		-webkit-animation: 0;
+		-o-animation: 0;
+		animation: 0;
+	}
+}
+
+.clickme {
+	position: absolute;
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: @quaternary-color;
+	color: #ffffff;
+}
+
+
+.clickme.complete {
+	-webkit-transform: none !important;
+	-moz-transform: none !important;
+	-ms-transform: none !important;
+	-o-transform: none !important;
+	transform: none !important;
+	background-position: bottom;
+}
+
+.clickme-item {
+
+}
+
+.clickme-item-hidden {
+	opacity: 0;
+}

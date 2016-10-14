@@ -1,0 +1,20 @@
+{
+	"name": "adapt-html",
+	"description": "A component containing custom HTML and CSS",
+	"version": "1.0",
+	"framework": "^2.0.0",
+	"displayName": "HTML",
+	"component": "html",
+	"main": "/js/adapt-html.js",
+	"homepage": "https://github.com/danielstorey/adapt-html",
+	"repository": "git://github.com/danielstorey/adapt-html.git",
+	"issues": "https://github.com/danielstorey/adapt-html/issues",
+	"keywords": [
+		"adapt-plugin",
+		"adapt-component"
+	],
+	"license": "GPLv3",
+	"authors": [
+		"Dan Storey <danielstorey@gmail.com>"
+	]
+}
