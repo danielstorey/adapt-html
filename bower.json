@@ -1,7 +1,7 @@
 {
 	"name": "adapt-html",
 	"description": "A component containing custom HTML and CSS",
-	"version": "1.0",
+	"version": "1.0.0",
 	"framework": "^2.0.0",
 	"displayName": "HTML",
 	"component": "html",
